@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/hamburgers.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/linea.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <a class="logo__link" href="index.html"><img src="./img/logo.svg" alt="Digital Project"></a>
+            </div>
+            <div class="hamburger-menu">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+            </div>
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="gallery.html">Галерея</a></li>
+                    <li class="nav__item"><a class="nav__link" href="projects.html">Проекты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="certificates.html">Сертификаты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile">
+                <nav class="mobile__menu">
+                    <ul class="mobile__list">
+                        <li class="mobile__item"><a class="mobile__link" href="index.html">Главная</a></li>
+                        <li class="mobile__item"><a class="mobile__link" href="gallery.html">Галерея</a></li>
+                        <li class="mobile__item"><a class="mobile__link" href="projects.html">Проекты</a></li>
+                        <li class="mobile__item"><a class="mobile__link" href="certificates.html">Сертификаты</a></li>
+                        <li class="mobile__item"><a class="mobile__link" href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main>
+
+<div class="container contacts__container">
+    <div class="contacts__info">
+        <h1 class="contacts__title title">Контактная<b>Информация</b></h1>
+        <ul class="contacts__list">
+            <li class="contacts__item"><a href="" class="contacts__link"><b>«Digital Project»</b>
+                г. Караганда, ул. Телевизионная 10</a></li>
+            <li class="contacts__item"><a href="tel:+77017776811" class="contacts__link">+7 (701) 77 76 811</a></li>
+            <li class="contacts__item"><a href="mailto:Galym.sultanov@mail.ru" class="contacts__link">Galym.sultanov@mail.ru</a></li>
+        </ul>
+        <button class="button button__primary button--dark contacts__button">Орабтная связь</button>
+    </div>
+    <div class="contacts__map">
+        <iframe class="contacts__location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.9846351528217!2d73.08341361528824!3d49.82395397939379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424346c3b32ffcaf%3A0x41481e634d919f9e!2z0YPQuy4g0KLQtdC70LXQstC40LfQuNC-0L3QvdCw0Y8gMTAsINCa0LDRgNCw0LPQsNC90LTQsCAxMDAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sua!4v1615150131616!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+<!-- * Form - modale window -->
+<div class="modale-wrap">
+    <div class="modale__background">
+        <div class="modale__inner">
+            <h2 class="form__title">Задать вопрос</h2>
+            <span class="form__exit exit"><img src="./img/exit.svg" alt="X"></span>
+        </div>
+        <form class="form contacts__form"  action="./php/mail.php" method="POST">
+            <input type="text" class="form__input" placeholder="Имя" name="user-name" required data-validate-field="name">
+            <input type="tel" class="form__input phone" placeholder="Номер телефона" name="user-phone" required  data-validate-field="phone">
+            <input type="text" class="form__input" placeholder="E-mail" name="user-email" required data-validate-field="email">
+            <input type="text" class="form__input" placeholder="Интересующий товар/услуга" name="user-product">
+            <textarea  class="form__input" placeholder="Сообщение" name="user-mesage" required></textarea>
+            <label class="form__desc">
+            <input class="form__check"  type="checkbox" required value="accept">
+            <span class="form__check--custom"></span>
+            Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+            </label>
+            <!-- <button class= "button button__primary button--dark" type="submit">Отправить
+            <img class="button__img" src="./img/arrowRightLight.svg" alt="arrowRight">
+            </button> -->
+            <input type="submit" class="form__input form__submit " value="Отправить">
+        </form>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="wrap__background">
+        <span class="accept__exit exit"><img src="./img/exit.svg" alt="X"></span>
+        <div class="accept__picture"><img class="accept__image" src="./img/accept.png" alt="OK"></div>
+        <h2 class="accept__title">Спасибо !</h2>
+        <p class="accept__desc">Ваше сообщение отправлено мы свяжемся с вами в ближайшее время</p>
+        <a href="contacts.html" class="button button--dark button__primary accept__button">Вернутся назад</a>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <a class="logo__link" href="index.html"><img src="./img/logo-light.svg" alt="Digital Project"></a>
+        </div>
+        <div class="footer__info">
+          <h4 class="footer__title">Информация</h4>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="index.html">Главная</a></li>
+            <li class="footer__item"><a class="footer__link" href="gallery.html">Галерея</a></li>
+            <li class="footer__item"><a class="footer__link" href="projects.html">Проекты</a></li>
+            <li class="footer__item"><a class="footer__link" href="certificates.html">Сертификаты</a></li>
+            <li class="footer__item"><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h4 class="footer__title">Контакты</h4>
+          <ul class="footer__list">
+            <li class="footer__item icon-location "> <a class="footer__link" href="contacts.html"> 100000, Республика  Казахстан, 
+              г. Караганда, ул. Телевизионная 10</a></li>
+            <li class="footer__item"><a class="footer__link icon-phone" href="tel:380977634750">+7 (701) 77 76 811</a></li>
+            <li class="footer__item"><a class="footer__link icon-mail" href="mailto:">Galym.sultanov@mail.ru</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <h4 class="footer__title">Социальные сети</h4>
+            <div class="footer__item">
+              <a class="footer__link icon-facebook" href="www.facebook.com"></a>
+            </div>
+            <div class="footer__item">
+              <a class="footer__link icon-twitter" href="www.twiter.com"></a>
+            </div>
+            <div class="footer__item">
+              <a class="footer__link icon-linkedin" href="linkedin.com"></a>
+            </div>
+            <div class="footer__item">
+              <a class="footer__link icon-pinterest" href="pinteres.com"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy 2019 Digital Project. Все права защищены.</div>
+  </footer>
+</main>
+<script src="./js/just-validate.min.js"></script>
+<script src="./js/inputmask.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/common.min.js"></script>
+</body>
+</html>
